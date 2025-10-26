@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projects - Leoxx</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+    <h2>Portfolio</h2>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">Chi sono</a>
+        <a href="projects.html">Progetti</a>
+        <a href="contact.html">Contatti</a>
+    </nav>
+</header>
+
+<section>
+    <h2>Progetti</h2>
+    <div class="projects-grid">
+        <div class="project-card show-on-scroll">
+            <img src="images/project1.jpg" alt="Project 1">
+            <div class="project-overlay">Progetto 1 - Python Bot</div>
+        </div>
+        <div class="project-card show-on-scroll">
+            <img src="images/project2.jpg" alt="Project 2">
+            <div class="project-overlay">Progetto 2 - Web Designer HTML/CSS</div>
+        </div>
+        <div class="project-card show-on-scroll">
+            <img src="images/project3.jpg" alt="Project 3">
+            <div class="project-overlay">Progetto 3 - PhotoShop/Illustration</div>
+        </div>
+        <div class="project-card show-on-scroll">
+            <img src="images/project4.jpg" alt="Project 4">
+            <div class="project-overlay">Progetto 4 - Discord Developer/Designer</div>
+        </div>
+    </div>
+</section>
+
+<footer>
+  <p>&copy; 2025 Leoxx. Tutti i diritti riservati.</p>
+  <div class="socials">
+    <a href="https://www.instagram.com/il_giorgii_/" target="_blank" aria-label="Instagram">
+      <i class="fab fa-instagram"></i> Instagram
+    </a>
+    <a href="https://discord.gg/7C6RreCR24" target="_blank" aria-label="Discord">
+      <span>Discord</span>
+    </a>
+    <a href="https://github.com/Leoxxexe" target="_blank" aria-label="GitHub">
+      <i class="fab fa-github"></i> GitHub
+    </a>
+  </div>
+</footer>
+
+
+<script>
+// Fade-in on scroll
+const fadersProjects = document.querySelectorAll('.show-on-scroll');
+const appearOptions = { threshold: 0.1, rootMargin: "0px 0px -50px 0px" };
+const appearOnScrollProjects = new IntersectionObserver(function(entries, observer){
+    entries.forEach(entry => {
+        if(!entry.isIntersecting) return;
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+    });
+}, appearOptions);
+
+fadersProjects.forEach(fader => appearOnScrollProjects.observe(fader));
+</script>
+</body>
+</html>
