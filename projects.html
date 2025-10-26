@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Projects - Leoxx</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+    <h2>Portfolio</h2>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">Chi sono</a>
+        <a href="projects.html" class="active">Progetti</a>
+        <a href="contact.html">Contatti</a>
+    </nav>
+</header>
+
+<section>
+    <h2>Progetti</h2>
+    <div class="projects-grid">
+        <!-- Progetti originali -->
+        <div class="project-card show-on-scroll">
+            <img src="images/project1.jpg" alt="Project 1">
+            <div class="project-overlay">Progetto 1 - Python Bot</div>
+            <p>Bot Discord sviluppato in Python, dotato di numerose funzionalità: sistema di recensioni, gestione dei bandi per lo staff, messaggi di benvenuto personalizzati, bot vocale per la riproduzione musicale, comandi di moderazione e molto altro.</p>
+        </div>
+        <div class="project-card show-on-scroll">
+            <img src="images/project2.jpg" alt="Project 2">
+            <div class="project-overlay">Progetto 2 - Web Designer HTML/CSS</div>
+            <p>Sviluppo siti web moderni in HTML e CSS, ottimizzati, funzionali e con design accattivante.
+Offro soluzioni personalizzate con funzionalità interattive e responsive per ogni dispositivo.</p>
+        </div>
+        <div class="project-card show-on-scroll">
+            <img src="images/project3.jpg" alt="Project 3">
+            <div class="project-overlay">Progetto 3 - PhotoShop/Illustration</div>
+            <p>Sono un grafico/editor alle prime armi, ma conosco molto bene le funzionalità dei programmi Adobe. Per vedere alcuni miei lavori, visita il mio Discord.</p>
+        </div>
+        <div class="project-card show-on-scroll">
+            <img src="images/project4.jpg" alt="Project 4">
+            <div class="project-overlay">Progetto 4 - Discord Developer/Designer</div>
+        </div>
+
+        <!-- Progetti aggiunti -->
+        <div class="project-card show-on-scroll">
+            <img src="images/project5.jpg" alt="Project 5">
+            <div class="project-overlay">Progetto 5 - Nigger</div>
+        </div>
+        <div class="project-card show-on-scroll">
+            <img src="images/project6.jpg" alt="Project 6">
+            <div class="project-overlay">Progetto 6 - Giallo</div>
+        </div>
+        <div class="project-card show-on-scroll">
+            <img src="images/project7.jpg" alt="Project 7">
+            <div class="project-overlay">Progetto 7 - E-commerce Frontend</div>
+        </div>
+        <div class="project-card show-on-scroll">
+            <img src="images/project8.jpg" alt="Project 8">
+            <div class="project-overlay">Progetto 8 - App Mobile Design</div>
+        </div>
+        <div class="project-card show-on-scroll">
+            <img src="images/project9.jpg" alt="Project 9">
+            <div class="project-overlay">Progetto 9 - AI Chat Interface</div>
+        </div>
+        <div class="project-card show-on-scroll">
+            <img src="images/project10.jpg" alt="Project 10">
+            <div class="project-overlay">Progetto 10 - Landing Page</div>
+        </div>
+        <div class="project-card show-on-scroll">
+            <img src="images/project11.jpg" alt="Project 11">
+            <div class="project-overlay">Progetto 11 - Video Editing</div>
+        </div>
+        <div class="project-card show-on-scroll">
+            <img src="images/project12.jpg" alt="Project 12">
+            <div class="project-overlay">Progetto 12 - Branding e Logo Design</div>
+        </div>
+    </div>
+</section>
+
+<footer>
+  <p>&copy; 2025 Leoxx. Tutti i diritti riservati.</p>
+  <div class="socials">
+    <a href="https://www.instagram.com/il_giorgii_/" target="_blank" aria-label="Instagram">
+      <i class="fab fa-instagram"></i> Instagram
+    </a>
+    <a href="https://discord.gg/7C6RreCR24" target="_blank" aria-label="Discord">
+      <span>Discord</span>
+    </a>
+    <a href="https://github.com/Leoxxexe" target="_blank" aria-label="GitHub">
+      <i class="fab fa-github"></i> GitHub
+    </a>
+  </div>
+</footer>
+
+<script>
+// Fade-in on scroll
+const fadersProjects = document.querySelectorAll('.show-on-scroll');
+const appearOptions = { threshold: 0.1, rootMargin: "0px 0px -50px 0px" };
+const appearOnScrollProjects = new IntersectionObserver(function(entries, observer){
+    entries.forEach(entry => {
+        if(!entry.isIntersecting) return;
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+    });
+}, appearOptions);
+
+fadersProjects.forEach(fader => appearOnScrollProjects.observe(fader));
+</script>
+</body>
+</html>
